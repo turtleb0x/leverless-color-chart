@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            font-family: 'Ubuntu', sans-serif;
+            background-color: #50577A;
+            color: lightgray;
+        }
+
+        header, div{
+            text-align: center;
+        }
+
+        #myCanvas {
+            padding-left: 0;
+            padding-right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            width: 801px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leverless Color Customizer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Leverless Color Customizer</h1>
+    </header>
+    <canvas id = "myCanvas" width="801" height="529" style="border:1px solid #000000;">
+    </canvas>
+
+    <br></br>
+
+    <div>
+        <label for="shellColor">Shell:</label>
+        <select name="shellColor" id="shellColor">
+            <option value="0">Purple</option>
+            <option value="1">Vanilla Cream</option>
+            <option value="2" selected>White</option>
+            <option value="3">Tan</option>
+            <option value="4">Peach</option>
+            <option value="5">Green</option>
+            <option value="6">Light Green</option>
+            <option value="7">Lime Green</option>
+            <option value="8">Olive</option>
+            <option value="9">Gold</option>
+            <option value="10">Yellow</option>
+            <option value="11">Black</option>
+            <option value="12">Dark Grey</option>
+            <option value="13">Grey</option>
+            <option value="14">Brown</option>
+            <option value="15">Coyote Brown</option>
+            <option value="16">Baby Blue</option>
+            <option value="17">Navy Blue</option>
+            <option value="18">Blue</option>
+            <option value="19">Peacock</option>
+            <option value="20">Teal</option>
+            <option value="21">Light Blue</option>
+            <option value="22">Seafoam Green</option>
+            <option value="23">Red</option>
+            <option value="24">Orange</option>
+            <option value="25">Burnt Orange</option>
+            <option value="26">Pink</option>
+            <option value="27">Light Pink</option>
+            <option value="28">Space Grey</option>
+        </select>
+
+        <br></br>
+
+        <label for="leftButton">Left Button:</label>
+        <select name="leftButton" id="leftButton">
+            <option value="0">Purple</option>
+            <option value="1" selected>Vanilla Cream</option>
+            <option value="2">White</option>
+            <option value="3">Tan</option>
+            <option value="4">Peach</option>
+            <option value="5">Green</option>
+            <option value="6">Light Green</option>
+            <option value="7">Lime Green</option>
+            <option value="8">Olive</option>
+            <option value="9">Gold</option>
+            <option value="10">Yellow</option>
+            <option value="11">Black</option>
+            <option value="12">Dark Grey</option>
+            <option value="13">Grey</option>
+            <option value="14">Brown</option>
+            <option value="15">Coyote Brown</option>
+            <option value="16">Baby Blue</option>
+            <option value="17">Navy Blue</option>
+            <option value="18">Blue</option>
+            <option value="19">Peacock</option>
+            <option value="20">Teal</option>
+            <option value="21">Light Blue</option>
+            <option value="22">Seafoam Green</option>
+            <option value="23">Red</option>
+            <option value="24">Orange</option>
+            <option value="25">Burnt Orange</option>
+            <option value="26">Pink</option>
+            <option value="27">Light Pink</option>
+            <option value="28">Space Grey</option>
+        </select>
+
+        <label for="downButton">Down Button:</label>
+        <select name="downButton" id="downButton">
+            <option value="0">Purple</option>
+            <option value="1" selected>Vanilla Cream</option>
+            <option value="2">White</option>
+            <option value="3">Tan</option>
+            <option value="4">Peach</option>
+            <option value="5">Green</option>
+            <option value="6">Light Green</option>
+            <option value="7">Lime Green</option>
+            <option value="8">Olive</option>
+            <option value="9">Gold</option>
+            <option value="10">Yellow</option>
+            <option value="11">Black</option>
+            <option value="12">Dark Grey</option>
+            <option value="13">Grey</option>
+            <option value="14">Brown</option>
+            <option value="15">Coyote Brown</option>
+            <option value="16">Baby Blue</option>
+            <option value="17">Navy Blue</option>
+            <option value="18">Blue</option>
+            <option value="19">Peacock</option>
+            <option value="20">Teal</option>
+            <option value="21">Light Blue</option>
+            <option value="22">Seafoam Green</option>
+            <option value="23">Red</option>
+            <option value="24">Orange</option>
+            <option value="25">Burnt Orange</option>
+            <option value="26">Pink</option>
+            <option value="27">Light Pink</option>
+            <option value="28">Space Grey</option>
+        </select>
+
+        <label for="rightButton">Right Button:</label>
+        <select name="rightButton" id="rightButton">
+            <option value="0">Purple</option>
+            <option value="1" selected>Vanilla Cream</option>
+            <option value="2">White</option>
+            <option value="3">Tan</option>
+            <option value="4">Peach</option>
+            <option value="5">Green</option>
+            <option value="6">Light Green</option>
+            <option value="7">Lime Green</option>
+            <option value="8">Olive</option>
+            <option value="9">Gold</option>
+            <option value="10">Yellow</option>
+            <option value="11">Black</option>
+            <option value="12">Dark Grey</option>
+            <option value="13">Grey</option>
+            <option value="14">Brown</option>
+            <option value="15">Coyote Brown</option>
+            <option value="16">Baby Blue</option>
+            <option value="17">Navy Blue</option>
+            <option value="18">Blue</option>
+            <option value="19">Peacock</option>
+            <option value="20">Teal</option>
+            <option value="21">Light Blue</option>
+            <option value="22">Seafoam Green</option>
+            <option value="23">Red</option>
+            <option value="24">Orange</option>
+            <option value="25">Burnt Orange</option>
+            <option value="26">Pink</option>
+            <option value="27">Light Pink</option>
+            <option value="28">Space Grey</option>
+        </select>
+
+        <label for="upButton">Up Button:</label>
+        <select name="upButton" id="upButton">
+            <option value="0">Purple</option>
+            <option value="1" selected>Vanilla Cream</option>
+            <option value="2">White</option>
+            <option value="3">Tan</option>
+            <option value="4">Peach</option>
+            <option value="5">Green</option>
+            <option value="6">Light Green</option>
+            <option value="7">Lime Green</option>
+            <option value="8">Olive</option>
+            <option value="9">Gold</option>
+            <option value="10">Yellow</option>
+            <option value="11">Black</option>
+            <option value="12">Dark Grey</option>
+            <option value="13">Grey</option>
+            <option value="14">Brown</option>
+            <option value="15">Coyote Brown</option>
+            <option value="16">Baby Blue</option>
+            <option value="17">Navy Blue</option>
+            <option value="18">Blue</option>
+            <option value="19">Peacock</option>
+            <option value="20">Teal</option>
+            <option value="21">Light Blue</option>
+            <option value="22">Seafoam Green</option>
+            <option value="23">Red</option>
+            <option value="24">Orange</option>
+            <option value="25">Burnt Orange</option>
+            <option value="26">Pink</option>
+            <option value="27">Light Pink</option>
+            <option value="28">Space Grey</option>
+        </select>
+
+        <br></br>
+
+        <label for="squareButton">Square Button:</label>
+        <select name="squareButton" id="squareButton">
+            <option value="0" selected>Purple</option>
+            <option value="1">Vanilla Cream</option>
+            <option value="2">White</option>
+            <option value="3">Tan</option>
+            <option value="4">Peach</option>
+            <option value="5">Green</option>
+            <option value="6">Light Green</option>
+            <option value="7">Lime Green</option>
+            <option value="8">Olive</option>
+            <option value="9">Gold</option>
+            <option value="10">Yellow</option>
+            <option value="11">Black</option>
+            <option value="12">Dark Grey</option>
+            <option value="13">Grey</option>
+            <option value="14">Brown</option>
+            <option value="15">Coyote Brown</option>
+            <option value="16">Baby Blue</option>
+            <option value="17">Navy Blue</option>
+            <option value="18">Blue</option>
+            <option value="19">Peacock</option>
+            <option value="20">Teal</option>
+            <option value="21">Light Blue</option>
+            <option value="22">Seafoam Green</option>
+            <option value="23">Red</option>
+            <option value="24">Orange</option>
+            <option value="25">Burnt Orange</option>
+            <option value="26">Pink</option>
+            <option value="27">Light Pink</option>
+            <option value="28">Space Grey</option>
+        </select>
+
+        <label for="triangleButton">Triangle Button:</label>
+        <select name="triangleButton" id="triangleButton">
+            <option value="0" selected>Purple</option>
+            <option value="1">Vanilla Cream</option>
+            <option value="2">White</option>
+            <option value="3">Tan</option>
+            <option value="4">Peach</option>
+            <option value="5">Green</option>
+            <option value="6">Light Green</option>
+            <option value="7">Lime Green</option>
+            <option value="8">Olive</option>
+            <option value="9">Gold</option>
+            <option value="10">Yellow</option>
+            <option value="11">Black</option>
+            <option value="12">Dark Grey</option>
+            <option value="13">Grey</option>
+            <option value="14">Brown</option>
+            <option value="15">Coyote Brown</option>
+            <option value="16">Baby Blue</option>
+            <option value="17">Navy Blue</option>
+            <option value="18">Blue</option>
+            <option value="19">Peacock</option>
+            <option value="20">Teal</option>
+            <option value="21">Light Blue</option>
+            <option value="22">Seafoam Green</option>
+            <option value="23">Red</option>
+            <option value="24">Orange</option>
+            <option value="25">Burnt Orange</option>
+            <option value="26">Pink</option>
+            <option value="27">Light Pink</option>
+            <option value="28">Space Grey</option>
+        </select>
+
+        <label for="r1Button">R1 Button:</label>
+        <select name="r1Button" id="r1Button">
+            <option value="0" selected>Purple</option>
+            <option value="1">Vanilla Cream</option>
+            <option value="2">White</option>
+            <option value="3">Tan</option>
+            <option value="4">Peach</option>
+            <option value="5">Green</option>
+            <option value="6">Light Green</option>
+            <option value="7">Lime Green</option>
+            <option value="8">Olive</option>
+            <option value="9">Gold</option>
+            <option value="10">Yellow</option>
+            <option value="11">Black</option>
+            <option value="12">Dark Grey</option>
+            <option value="13">Grey</option>
+            <option value="14">Brown</option>
+            <option value="15">Coyote Brown</option>
+            <option value="16">Baby Blue</option>
+            <option value="17">Navy Blue</option>
+            <option value="18">Blue</option>
+            <option value="19">Peacock</option>
+            <option value="20">Teal</option>
+            <option value="21">Light Blue</option>
+            <option value="22">Seafoam Green</option>
+            <option value="23">Red</option>
+            <option value="24">Orange</option>
+            <option value="25">Burnt Orange</option>
+            <option value="26">Pink</option>
+            <option value="27">Light Pink</option>
+            <option value="28">Space Grey</option>
+        </select>
+
+        <label for="l1Button">L1 Button:</label>
+        <select name="l1Button" id="l1Button">
+            <option value="0" selected>Purple</option>
+            <option value="1">Vanilla Cream</option>
+            <option value="2">White</option>
+            <option value="3">Tan</option>
+            <option value="4">Peach</option>
+            <option value="5">Green</option>
+            <option value="6">Light Green</option>
+            <option value="7">Lime Green</option>
+            <option value="8">Olive</option>
+            <option value="9">Gold</option>
+            <option value="10">Yellow</option>
+            <option value="11">Black</option>
+            <option value="12">Dark Grey</option>
+            <option value="13">Grey</option>
+            <option value="14">Brown</option>
+            <option value="15">Coyote Brown</option>
+            <option value="16">Baby Blue</option>
+            <option value="17">Navy Blue</option>
+            <option value="18">Blue</option>
+            <option value="19">Peacock</option>
+            <option value="20">Teal</option>
+            <option value="21">Light Blue</option>
+            <option value="22">Seafoam Green</option>
+            <option value="23">Red</option>
+            <option value="24">Orange</option>
+            <option value="25">Burnt Orange</option>
+            <option value="26">Pink</option>
+            <option value="27">Light Pink</option>
+            <option value="28">Space Grey</option>
+        </select>
+
+        <br></br>
+
+        <label for="crossButton">Cross Button:</label>
+        <select name="crossButton" id="crossButton">
+            <option value="0" selected>Purple</option>
+            <option value="1">Vanilla Cream</option>
+            <option value="2">White</option>
+            <option value="3">Tan</option>
+            <option value="4">Peach</option>
+            <option value="5">Green</option>
+            <option value="6">Light Green</option>
+            <option value="7">Lime Green</option>
+            <option value="8">Olive</option>
+            <option value="9">Gold</option>
+            <option value="10">Yellow</option>
+            <option value="11">Black</option>
+            <option value="12">Dark Grey</option>
+            <option value="13">Grey</option>
+            <option value="14">Brown</option>
+            <option value="15">Coyote Brown</option>
+            <option value="16">Baby Blue</option>
+            <option value="17">Navy Blue</option>
+            <option value="18">Blue</option>
+            <option value="19">Peacock</option>
+            <option value="20">Teal</option>
+            <option value="21">Light Blue</option>
+            <option value="22">Seafoam Green</option>
+            <option value="23">Red</option>
+            <option value="24">Orange</option>
+            <option value="25">Burnt Orange</option>
+            <option value="26">Pink</option>
+            <option value="27">Light Pink</option>
+            <option value="28">Space Grey</option>
+        </select>
+
+        <label for="circleButton">Circle Button:</label>
+        <select name="circleButton" id="circleButton">
+            <option value="0" selected>Purple</option>
+            <option value="1">Vanilla Cream</option>
+            <option value="2">White</option>
+            <option value="3">Tan</option>
+            <option value="4">Peach</option>
+            <option value="5">Green</option>
+            <option value="6">Light Green</option>
+            <option value="7">Lime Green</option>
+            <option value="8">Olive</option>
+            <option value="9">Gold</option>
+            <option value="10">Yellow</option>
+            <option value="11">Black</option>
+            <option value="12">Dark Grey</option>
+            <option value="13">Grey</option>
+            <option value="14">Brown</option>
+            <option value="15">Coyote Brown</option>
+            <option value="16">Baby Blue</option>
+            <option value="17">Navy Blue</option>
+            <option value="18">Blue</option>
+            <option value="19">Peacock</option>
+            <option value="20">Teal</option>
+            <option value="21">Light Blue</option>
+            <option value="22">Seafoam Green</option>
+            <option value="23">Red</option>
+            <option value="24">Orange</option>
+            <option value="25">Burnt Orange</option>
+            <option value="26">Pink</option>
+            <option value="27">Light Pink</option>
+            <option value="28">Space Grey</option>
+        </select>
+
+        <label for="r2Button">R2 Button:</label>
+        <select name="r2Button" id="r2Button">
+            <option value="0" selected>Purple</option>
+            <option value="1">Vanilla Cream</option>
+            <option value="2">White</option>
+            <option value="3">Tan</option>
+            <option value="4">Peach</option>
+            <option value="5">Green</option>
+            <option value="6">Light Green</option>
+            <option value="7">Lime Green</option>
+            <option value="8">Olive</option>
+            <option value="9">Gold</option>
+            <option value="10">Yellow</option>
+            <option value="11">Black</option>
+            <option value="12">Dark Grey</option>
+            <option value="13">Grey</option>
+            <option value="14">Brown</option>
+            <option value="15">Coyote Brown</option>
+            <option value="16">Baby Blue</option>
+            <option value="17">Navy Blue</option>
+            <option value="18">Blue</option>
+            <option value="19">Peacock</option>
+            <option value="20">Teal</option>
+            <option value="21">Light Blue</option>
+            <option value="22">Seafoam Green</option>
+            <option value="23">Red</option>
+            <option value="24">Orange</option>
+            <option value="25">Burnt Orange</option>
+            <option value="26">Pink</option>
+            <option value="27">Light Pink</option>
+            <option value="28">Space Grey</option>
+        </select>
+
+        <label for="l2Button">L2 Button:</label>
+        <select name="l2Button" id="l2Button">
+            <option value="0" selected>Purple</option>
+            <option value="1">Vanilla Cream</option>
+            <option value="2">White</option>
+            <option value="3">Tan</option>
+            <option value="4">Peach</option>
+            <option value="5">Green</option>
+            <option value="6">Light Green</option>
+            <option value="7">Lime Green</option>
+            <option value="8">Olive</option>
+            <option value="9">Gold</option>
+            <option value="10">Yellow</option>
+            <option value="11">Black</option>
+            <option value="12">Dark Grey</option>
+            <option value="13">Grey</option>
+            <option value="14">Brown</option>
+            <option value="15">Coyote Brown</option>
+            <option value="16">Baby Blue</option>
+            <option value="17">Navy Blue</option>
+            <option value="18">Blue</option>
+            <option value="19">Peacock</option>
+            <option value="20">Teal</option>
+            <option value="21">Light Blue</option>
+            <option value="22">Seafoam Green</option>
+            <option value="23">Red</option>
+            <option value="24">Orange</option>
+            <option value="25">Burnt Orange</option>
+            <option value="26">Pink</option>
+            <option value="27">Light Pink</option>
+            <option value="28">Space Grey</option>
+        </select>
+    </div>
+
+    <script>
+        //Initial Colors
+        let shellColor = 2;
+        let leftButtonColor = 1;
+        let downButtonColor = 1;
+        let rightButtonColor = 1;
+        let upButtonColor = 1;
+        let squareButtonColor = 0;
+        let triangleButtonColor = 0;
+        let r1ButtonColor = 0;
+        let l1ButtonColor = 0;
+        let crossButtonColor = 0;
+        let circleButtonColor = 0;
+        let r2ButtonColor = 0;
+        let l2ButtonColor = 0;
+
+        //Create canvas
+        function loadCanvas(){
+
+            var canvas = document.querySelector('canvas');
+
+            canvas.width = 801;
+            canvas.height = 529;
+
+            var c = canvas.getContext('2d');
+
+            //Colors
+            var purple = 'rgb(174, 130, 198)';
+            var vanillaCream = 'rgb(240, 236, 172)';
+            var white = 'rgb(243, 245, 247)';
+            var tan = 'rgb(209, 191, 158)';
+            var peach = 'rgb(247, 195, 112)';
+            var green = 'rgb(59, 95, 79)';
+            var lightGreen = 'rgb(23, 190, 74)';
+            var limeGreen = 'rgb(52, 212, 27)';
+            var olive = 'rgb(73, 104, 103)';
+            var gold = 'rgb(190, 166, 47)';
+            var yellow = 'rgb(254, 234, 96)';
+            var black = 'rgb(44, 46, 47)';
+            var darkGrey = 'rgb(91, 93, 92)';
+            var grey = 'rgb(119, 123, 123)';
+            var brown = 'rgb(93, 48, 41)';
+            var coyoteBrown = 'rgb(200, 120, 55)';
+            var babyBlue = 'rgb(181, 235, 245)';
+            var navyBlue = 'rgb(24, 45, 95)';
+            var blue = 'rgb(29, 109, 221)';
+            var peacock = 'rgb(17, 126, 166)';
+            var teal = 'rgb(18, 151, 167)';
+            var lightBlue = 'rgb(75, 167, 216)';
+            var seafoamGreen = 'rgb(129, 218, 210)';
+            var red = 'rgb(191, 52, 58)';
+            var orange = 'rgb(246, 74, 24)';
+            var burntOrange = 'rgb(204, 105, 73)';
+            var pink = 'rgb(235, 22, 89)';
+            var lightPink = 'rgb(248, 147, 140)';
+            var spaceGrey = 'rgb(171, 170, 168)';
+
+            var colorsArray = [purple, vanillaCream, white, tan, peach, green, lightGreen, limeGreen, olive, gold, yellow, black, darkGrey, grey, brown, coyoteBrown, babyBlue, navyBlue, blue, peacock, teal, lightBlue, seafoamGreen, red, orange, burntOrange, pink, lightPink, spaceGrey];
+
+            //Button Colors
+
+            var leftButton = colorsArray[leftButtonColor];
+            var downButton = colorsArray[downButtonColor];
+            var rightButton = colorsArray[rightButtonColor];
+            var upButton = colorsArray[upButtonColor];
+            var crossButton = colorsArray[crossButtonColor];
+            var squareButton = colorsArray[squareButtonColor];
+            var circleButton = colorsArray[circleButtonColor];
+            var triangleButton = colorsArray[triangleButtonColor];
+            var r2Button = colorsArray[r2ButtonColor];
+            var r1Button = colorsArray[r1ButtonColor];
+            var l2Button = colorsArray[l2ButtonColor];
+            var l1Button = colorsArray[l1ButtonColor];
+            var shell = colorsArray[shellColor];
+
+            //Shell and Button Colors
+            c.fillStyle = shell;
+            c.fillRect(0, 0, 801, 529);
+
+            var coords = [[85, 151, leftButton], [190, 151, downButton], [285, 198, rightButton], [359, 397,upButton], 
+                        [416, 132, squareButton], [397, 265, crossButton], [516, 94, triangleButton], [497, 217, circleButton],
+                        [616, 94, r1Button], [597, 217, r2Button], [716, 94, l1Button], [697, 217, l2Button]];
+
+            for(var i = 0; i < coords.length; i++){
+                c.beginPath()
+                if (i == 3){
+                    c.arc(coords[i][0], coords[i][1], 57, 0, Math.PI * 2, true);
+                } else {
+                    c.arc(coords[i][0], coords[i][1], 45, 0, Math.PI * 2, true);
+                }
+                c.fillStyle = coords[i][2];
+                c.fill();
+                if (shell === black){
+                    c.strokeStyle = white;
+                } else {
+                    c.strokeStyle = black;
+                }
+                c.stroke();
+            }
+            console.log(canvas);
+        }
+
+        //Initial load
+        loadCanvas();
+
+        //Change Button Colors
+        document.getElementById("leftButton").addEventListener("change", onLeftButtonChange);
+        document.getElementById("downButton").addEventListener("change", onDownButtonChange);
+        document.getElementById("rightButton").addEventListener("change", onRightButtonChange);
+        document.getElementById("upButton").addEventListener("change", onUpButtonChange);
+        document.getElementById("shellColor").addEventListener("change", onShellColorChange);
+        document.getElementById("squareButton").addEventListener("change", onSquareButtonChange);
+        document.getElementById("triangleButton").addEventListener("change", onTriangleButtonChange);
+        document.getElementById("r1Button").addEventListener("change", onR1ButtonChange);
+        document.getElementById("l1Button").addEventListener("change", onL1ButtonChange);
+        document.getElementById("crossButton").addEventListener("change", onCrossButtonChange);
+        document.getElementById("circleButton").addEventListener("change", onCircleButtonChange);
+        document.getElementById("r2Button").addEventListener("change", onR2ButtonChange);
+        document.getElementById("l2Button").addEventListener("change", onL2ButtonChange);
+
+        function onLeftButtonChange(event){
+            let leftButtonEvent = event.target;
+            leftButtonColor = leftButtonEvent.value;
+            loadCanvas();
+        }
+
+        function onDownButtonChange(event){
+            let downButtonEvent = event.target;
+            downButtonColor = downButtonEvent.value;
+            loadCanvas();
+        }
+
+        function onRightButtonChange(event){
+            let rightButtonEvent = event.target;
+            rightButtonColor = rightButtonEvent.value;
+            loadCanvas();
+        }
+
+        function onUpButtonChange(event){
+            let upButtonEvent = event.target;
+            upButtonColor = upButtonEvent.value;
+            loadCanvas();
+        }
+
+        function onShellColorChange(event){
+            let shellColorEvent = event.target;
+            shellColor = shellColorEvent.value;
+            loadCanvas();
+        }
+
+        function onSquareButtonChange(event){
+            let squareColorEvent = event.target;
+            squareButtonColor = squareColorEvent.value;
+            loadCanvas();
+        }
+
+        function onTriangleButtonChange(event){
+            let triangleColorEvent = event.target;
+            triangleButtonColor = triangleColorEvent.value;
+            loadCanvas();
+        }
+
+        function onR1ButtonChange(event){
+            let r1ColorEvent = event.target;
+            r1ButtonColor = r1ColorEvent.value;
+            loadCanvas();
+        }
+
+        function onL1ButtonChange(event){
+            let l1ColorEvent = event.target;
+            l1ButtonColor = l1ColorEvent.value;
+            loadCanvas();
+        }
+
+        function onCrossButtonChange(event){
+            let crossColorEvent = event.target;
+            crossButtonColor = crossColorEvent.value;
+            loadCanvas();
+        }
+
+        function onCircleButtonChange(event){
+            let circleColorEvent = event.target;
+            circleButtonColor = circleColorEvent.value;
+            loadCanvas();
+        }
+
+        function onR2ButtonChange(event){
+            let r2ColorEvent = event.target;
+            r2ButtonColor = r2ColorEvent.value;
+            loadCanvas();
+        }
+
+        function onL2ButtonChange(event){
+            let l2ColorEvent = event.target;
+            l2ButtonColor = l2ColorEvent.value;
+            loadCanvas();
+        }
+    </script>
+</body>
+</html>
